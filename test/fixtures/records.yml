@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  domain_id: 1
+  address: MyString
+  acl: MyString
+
+two:
+  domain_id: 1
+  address: MyString
+  acl: MyString

@@ -1,0 +1,32 @@
+
+<% form_for(domain) do |f| %>
+  <% javascript_tag do %>
+    <%= "var record='#{generate_template(f, :records)}'" %>
+  <% end %>
+  <%= f.error_messages %>
+  <div class="div_name">
+  <div class="div_name_label"><%= f.label :Nombre %><br /></div>
+  <div class="div_name_input"><%= f.text_field :name %></div>
+  </div>
+  <div class="div_ttl">
+    <div class="div_ttl_label"><%= f.label :TTL%> <br /></div>
+    <div class="div_ttl_input"><%= f.text_field :ttl %></div>
+  </div>
+  <div class="div_enabled">
+    <%= f.label :Activado %><br />
+    <%= f.check_box :enabled %> 
+  </div>
+  <h1>Registros</h1>
+  <div id="records">
+  <% f.fields_for :records do |fr| %>
+    <%= render :partial => "record", :locals => {:f => fr } %>
+  <% end %>
+ </div>
+  <p>
+    <%= link_to 'Agregar Registro', '#record', :class => "add_nested_item", :rel => "#records" %>
+  </p>
+    
+  <p>
+    <%= f.submit 'Guardar' %>
+  </p>
+<% end %>

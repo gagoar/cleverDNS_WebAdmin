@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Clever DNS</title>
+  <%= stylesheet_link_tag 'scaffold', 'styles' %>
+  <%= javascript_include_tag 'jquery-1.4.2.min.js', 'nested.js' %>
+  <%# javascript_include_tag :defaults %>
+</head>
+<body>
+<div id="wrapper">
+<div id="brand">
+ </div>
+<div id="menu">
+  <%= link_to "Lista de Dominios", domains_path %>
+  <%= link_to "Nuevo Dominio", new_domain_path %>
+  <%= link_to "Recargar Clever DNS", reload_path , :confirm=> '¿Está seguro que desea recargar los registros?', :method => :reload %>
+</div>
+
+<p class="alert"><%= flash[:notice] %></p>
+
+<%= yield %>
+
+</div>
+<div id="footer">
+  <p>CleverDNS Licencia GPL |contacto: xeroice at gmail.com </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<h1>Nuevo Registro</h1>
+
+<% form_for(@record) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :domain_id %><br />
+    <%= f.select :domain_id, options_for_select(Domain.all.collect {|o| [ o.name, o.id ] }) %>
+  </p>
+  <p>
+    <%= f.label :direccion %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :Permisos %><br />
+    <%= f.text_field :acl %>
+  </p>
+  <p>
+    <%= f.submit 'Crear' %>
+  </p>
+<% end %>
+
+<%= link_to 'Volver', records_path %>

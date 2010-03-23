@@ -1,0 +1,24 @@
+<h1>Modificar Registro</h1>
+
+<% form_for(@record) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :domain_id %><br />
+    <%= f.text_field :domain_id %>
+  </p>
+  <p>
+    <%= f.label :Direccion %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :Permiso %><br />
+    <%= f.text_field :acl %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @record %> |
+<%= link_to 'Back', records_path %>

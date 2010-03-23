@@ -1,0 +1,12 @@
+<div class="record">
+  <div class="div_address">
+  <div class="div_address_label"><%= f.label :Dirección %></div>
+  <div class="div_address_input"><%= f.text_field :address %></div>
+  </div>
+
+  <div class="div_allow">
+    <div class="div_allow_label"> <%= f.label :Permisos %></div>
+    <div class="div_allow_input">  <%= f.text_field :acl %></div>
+  </div>
+  <%= remove_link_unless_new_record(f) %>
+</div>

@@ -1,0 +1,18 @@
+<p>
+  <b>Dominio:</b>
+  <%=h @record.domain_id %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%=h @record.address %>
+</p>
+
+<p>
+  <b>Permiso:</b>
+  <%=h @record.acl %>
+</p>
+
+
+<%= link_to 'Modificar', edit_record_path(@record) %> |
+<%= link_to 'Volver', records_path %>

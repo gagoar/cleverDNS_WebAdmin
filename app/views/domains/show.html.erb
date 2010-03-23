@@ -1,0 +1,31 @@
+<div class="show_domain">
+<p class="name">
+<span class="show_domain_name"><%=h @domain.name %></span>
+</p>
+<p class="ttl">
+  <b>TTL:</b>
+  <%=h @domain.ttl %>
+</p>
+
+<p class="enabled">
+  <b>Activado:</b>
+  <%=h @domain.enabled %>
+</p>
+</div>
+<h1> Registros </h1>
+<div class="record_show">
+<% @domain.records.each do |r| %>
+  <div class="record">
+  <p>
+  <span class="reg_dir"> <b>Dirección:</b>
+  <%=h r.address %></span>
+  <span class="reg_allow"><b>Permiso:</b>
+  <%=h r.acl %></span>
+  </p>
+  </div>
+<% end %>
+</div>
+<p class="navi">
+<%= link_to 'Modificar', edit_domain_path(@domain) %> |
+<%= link_to 'Volver', domains_path %>
+</p>
