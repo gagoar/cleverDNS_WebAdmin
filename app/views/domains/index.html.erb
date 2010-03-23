@@ -20,6 +20,7 @@
     <td><%= link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete %></td>
   </tr>
 <% end %>
+<%= will_paginate @domains %>
 </table>
 
 <br />

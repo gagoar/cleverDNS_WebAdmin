@@ -15070,3 +15070,342 @@ Processing DomainsController#index (for 190.179.201.220 at 2010-03-21 19:33:33) 
 Rendering template within layouts/application
 Rendering domains/index
 Completed in 162ms (View: 145, DB: 4) | 200 OK [http://190.15.197.10/domains]
+
+
+Processing DomainsController#wellcome (for 127.0.0.1 at 2010-03-23 11:42:46) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 105ms (View: 102, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 11:42:51) [GET]
+  [4;36;1mDomain Load (5.3ms)[0m   [0;1mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 321ms (View: 272, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 11:57:09) [GET]
+
+SyntaxError (/home/gagoar/dev/CleverDNS_WebAdmin.github.com/app/controllers/domains_controller.rb:20: syntax error, unexpected $undefined
+    @domains_pag=@.domain.paginate(:page=>params[:page])
+                  ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.4ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 11:57:40) [GET]
+  [4;35;1mDomain Load (5.2ms)[0m   [0mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 290ms (View: 264, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:00:14) [GET]
+  [4;36;1mDomain Load (5.2ms)[0m   [0;1mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 280ms (View: 262, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:00:17) [GET]
+  [4;35;1mDomain Load (5.2ms)[0m   [0mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 276ms (View: 257, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:00:27) [GET]
+  [4;36;1mDomain Load (5.1ms)[0m   [0;1mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 278ms (View: 260, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:00:28) [GET]
+  [4;35;1mDomain Load (5.2ms)[0m   [0mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 294ms (View: 272, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:00:28) [GET]
+  [4;36;1mDomain Load (5.3ms)[0m   [0;1mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 285ms (View: 265, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:00:29) [GET]
+  [4;35;1mDomain Load (5.2ms)[0m   [0mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 271ms (View: 251, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:51:57) [GET]
+  [4;36;1mDomain Load (8.5ms)[0m   [0;1mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 472ms (View: 444, DB: 8) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:57:13) [GET]
+  [4;35;1mDomain Load (7.9ms)[0m   [0mSELECT * FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+
+ActionView::TemplateError (undefined method `total_pages' for #<Array:0x7f6c1bea7110>) on line #23 of app/views/domains/index.html.erb:
+20:     <td><%= link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete %></td>
+21:   </tr>
+22: <% end %>
+23: <%= will_paginate @domains %>
+24: </table>
+25: 
+26: <br />
+
+    /usr/lib/ruby/gems/1.8/gems/will_paginate-2.3.12/lib/will_paginate/view_helpers.rb:201:in `total_pages_for_collection'
+    /usr/lib/ruby/gems/1.8/gems/will_paginate-2.3.12/lib/will_paginate/view_helpers.rb:98:in `will_paginate'
+    app/views/domains/index.html.erb:23
+    app/controllers/domains_controller.rb:11:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (216.6ms)
+Rendered rescues/_request_and_response (3.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:58:22) [GET]
+  [4;36;1mDomain Load (1.4ms)[0m   [0;1mSELECT * FROM "domains" LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #13 of app/views/domains/index.html.erb:
+10:     <th class="actions"></th>
+11:   </tr>
+12:   <%style="row_alt"%>
+13: <% @domains.each_with_index do |domain, index| %>
+14:     <tr class=<%=h style if index % 2 ==0 %>>
+15:     <td><%=h domain.name %></td>
+16:     <td><%=h domain.ttl %></td>
+
+    app/views/domains/index.html.erb:13
+    app/controllers/domains_controller.rb:11:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (232.9ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 12:59:00) [GET]
+  [4;36;1mDomain Load (2.8ms)[0m   [0;1mSELECT * FROM "domains" LIMIT 8 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #13 of app/views/domains/index.html.erb:
+10:     <th class="actions"></th>
+11:   </tr>
+12:   <%style="row_alt"%>
+13: <% @domains.each_with_index do |domain, index| %>
+14:     <tr class=<%=h style if index % 2 ==0 %>>
+15:     <td><%=h domain.name %></td>
+16:     <td><%=h domain.ttl %></td>
+
+    app/views/domains/index.html.erb:13
+    app/controllers/domains_controller.rb:11:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#wellcome (for 127.0.0.1 at 2010-03-23 13:02:42) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 41ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:02:45) [GET]
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/domains_controller.rb:9:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:04:16) [GET]
+  [4;36;1mDomain Load (3.8ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY updated_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #13 of app/views/domains/index.html.erb:
+10:     <th class="actions"></th>
+11:   </tr>
+12:   <%style="row_alt"%>
+13: <% @domains.each_with_index do |domain, index| %>
+14:     <tr class=<%=h style if index % 2 ==0 %>>
+15:     <td><%=h domain.name %></td>
+16:     <td><%=h domain.ttl %></td>
+
+    app/views/domains/index.html.erb:13
+    app/controllers/domains_controller.rb:11:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (228.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#wellcome (for 127.0.0.1 at 2010-03-23 13:06:59) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 70ms (View: 65, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:01) [GET]
+  [4;36;1mDomain Load (4.2ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 241ms (View: 215, DB: 5) | 200 OK [http://0.0.0.0/domains]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:04) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mDomain Load (4.0ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 10[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 144ms (View: 117, DB: 4) | 200 OK [http://0.0.0.0/domains?page=2]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:05) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mDomain Load (3.7ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 20[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 132ms (View: 108, DB: 4) | 200 OK [http://0.0.0.0/domains?page=3]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:06) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mDomain Load (1.7ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 30[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 57ms (View: 38, DB: 2) | 200 OK [http://0.0.0.0/domains?page=4]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:07) [GET]
+  Parameters: {"page"=>"3"}
+  [4;35;1mDomain Load (3.8ms)[0m   [0mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 20[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 130ms (View: 105, DB: 4) | 200 OK [http://0.0.0.0/domains?page=3]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:18) [GET]
+  Parameters: {"page"=>"4"}
+  [4;35;1mDomain Load (1.6ms)[0m   [0mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 30[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 49ms (View: 30, DB: 2) | 200 OK [http://0.0.0.0/domains?page=4]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:20) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mDomain Load (4.3ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 20[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 238ms (View: 110, DB: 5) | 200 OK [http://0.0.0.0/domains?page=3]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:21) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mDomain Load (3.9ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 10[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 166ms (View: 131, DB: 4) | 200 OK [http://0.0.0.0/domains?page=2]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:21) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mDomain Load (4.0ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 240ms (View: 107, DB: 5) | 200 OK [http://0.0.0.0/domains?page=1]

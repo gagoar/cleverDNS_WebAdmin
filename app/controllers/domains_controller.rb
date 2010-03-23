@@ -5,11 +5,12 @@ class DomainsController < ApplicationController
   end
 
   def index
-    @domains = Domain.all
+    # @domains = Domain.all
+    @domains=Domain.paginate :page => params[:page],  :order => 'created_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @domains }
+      format.xml  { render :xml => @domains_pag }
     end
   end
 
@@ -17,10 +18,10 @@ class DomainsController < ApplicationController
   # GET /domains/1.xml
   def show
     @domain = Domain.find(params[:id])
-
     respond_to do |format|
+
       format.html # show.html.erb
-      format.xml  { render :xml => @domain }
+      format.xml  { render :xml => @domain_pag }
     end
   end
 
