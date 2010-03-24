@@ -31,6 +31,7 @@ table,caption,tbody,tfoot,thead,tr,th,td {
     font-family: inherit;
     text-align: left;
     outline: none;
+    text-transform: none;
 }
 html, body {
     height: 100%;
@@ -272,19 +273,18 @@ height: 45px;
 #domain_submit{
 margin: 25px 0px;}
 
+
 .navi{
 display: block;
 padding-top: 15px;
 margin-top: 10px;
 clear:both;}
  
-.div_name, .div_ttl, .div_enabled{
+.div_name, .div_ttl, .div_enabled {
 display: block;
 position: relative;
 float: left;
 height: 80px;
-}
-.div_ttl{
 text-transform: uppercase;}
 
 .div_name, .div_ttl{
@@ -316,6 +316,7 @@ margin-right: 100px;
 .record_show .record{
 float: none;
 height: 25px;}
+
 
 #footer{
 display: block;
@@ -351,4 +352,6 @@ position: relative;
 float: left;
 width: 300px;
 }
-
+.errorExplanation ul li {
+text-transform: uppercase;
+}
