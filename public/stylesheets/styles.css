@@ -125,6 +125,15 @@ font-weight: bold;
 #footer{
 color: #E2610A;}
 
+
+.paginationBottom {
+text-align: center;
+border-top: 1px solid #B54B02;
+}
+.paginationTop{
+text-align: center;
+border-bottom: 1px solid #B54B02;
+}
 /* ---------------------------------------------------
     Layout
 ------------------------------------------------------ */

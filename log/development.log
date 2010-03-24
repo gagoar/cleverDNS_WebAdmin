@@ -15409,3 +15409,240 @@ Processing DomainsController#index (for 127.0.0.1 at 2010-03-23 13:07:21) [GET]
 Rendering template within layouts/application
 Rendering domains/index
 Completed in 240ms (View: 107, DB: 5) | 200 OK [http://0.0.0.0/domains?page=1]
+
+
+Processing DomainsController#wellcome (for 127.0.1.1 at 2010-03-24 14:50:47) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 97ms (View: 94, DB: 0) | 200 OK [http://clever.dns/]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:50:50) [GET]
+  [4;36;1mDomain Load (2.0ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 169ms (View: 136, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:02) [GET]
+  [4;36;1mDomain Load (1.9ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 82ms (View: 66, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:02) [GET]
+  [4;36;1mDomain Load (1.9ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 73ms (View: 59, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:03) [GET]
+  [4;36;1mDomain Load (1.8ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 126ms (View: 114, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:03) [GET]
+  [4;36;1mDomain Load (2.1ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 72ms (View: 58, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:03) [GET]
+  [4;36;1mDomain Load (2.0ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 134ms (View: 120, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:04) [GET]
+  [4;36;1mDomain Load (2.0ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 72ms (View: 59, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:04) [GET]
+  [4;36;1mDomain Load (79.7ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 148ms (View: 55, DB: 80) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:05) [GET]
+  [4;36;1mDomain Load (1.8ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 67ms (View: 54, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:58:06) [GET]
+  [4;36;1mDomain Load (1.8ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 156ms (View: 142, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:59:04) [GET]
+  [4;36;1mDomain Load (1.8ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 70ms (View: 56, DB: 2) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:59:07) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mDomain Load (1.9ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 160ms (View: 144, DB: 2) | 200 OK [http://clever.dns/domains?page=2]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:59:09) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mDomain Load (1.7ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 20[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 70ms (View: 55, DB: 2) | 200 OK [http://clever.dns/domains?page=3]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:59:10) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mDomain Load (1.7ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 72ms (View: 57, DB: 2) | 200 OK [http://clever.dns/domains?page=2]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 14:59:10) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mDomain Load (2.1ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "domains" [0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 70ms (View: 55, DB: 2) | 200 OK [http://clever.dns/domains?page=1]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecords (20100315205247)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "records"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315205247'[0m
+Migrating to CreateDomains (20100315204659)
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "domains"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315204659'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20100315204659)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "domains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "enabled" boolean DEFAULT 't', "ttl" integer DEFAULT 150, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315204659')[0m
+Migrating to CreateRecords (20100315205247)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "records" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "domain_id" integer, "address" varchar(255), "acl" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315205247')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("domains")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("records")[0m
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 15:08:13) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mDomain Load (0.5ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://clever.dns/domains?page=1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 15:08:14) [GET]
+  [4;35;1mDomain Load (0.5ms)[0m   [0mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 15:08:17) [GET]
+  [4;36;1mDomain Load (0.5ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 94ms (View: 6, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-24 15:08:23) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (3.4ms)
+Rendered domains/_record (2.1ms)
+Rendered domains/_form (19.7ms)
+Completed in 86ms (View: 35, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-24 15:08:38) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"Joy1UjuKZ2JKkxexy7Z2QccuVJeqDlBlvhXC1D2xtUE=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "acl"=>"127.0.0.1/32"}}}}
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;36;1mDomain Create (1.9ms)[0m   [0;1mINSERT INTO "domains" ("name", "ttl", "created_at", "updated_at", "enabled") VALUES('www.clever.dns', 150, '2010-03-24 18:08:38', '2010-03-24 18:08:38', 't')[0m
+  [4;35;1mRecord Create (0.2ms)[0m   [0mINSERT INTO "records" ("address", "created_at", "updated_at", "domain_id", "acl") VALUES('127.0.0.1', '2010-03-24 18:08:38', '2010-03-24 18:08:38', 1, '127.0.0.1/32')[0m
+Redirected to http://clever.dns/domains/1
+Completed in 32ms (DB: 2) | 302 Found [http://clever.dns/domains]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-24 15:08:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 105ms (View: 95, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-24 15:08:40) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
