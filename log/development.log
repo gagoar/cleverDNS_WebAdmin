@@ -17446,3 +17446,16 @@ DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy in
 Rendered domains/_record (2.9ms)
 Rendered domains/_form (22.8ms)
 Completed in 40ms (View: 29, DB: 1) | 200 OK [http://190.15.197.10/domains/1/edit]
+
+
+Processing DomainsController#wellcome (for 127.0.1.1 at 2010-03-25 14:29:13) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 169ms (View: 167, DB: 0) | 200 OK [http://clever.dns/]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-25 14:29:16) [GET]
+  [4;36;1mDomain Load (1.0ms)[0m   [0;1mSELECT * FROM "domains" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 118ms (View: 87, DB: 1) | 200 OK [http://clever.dns/domains]
