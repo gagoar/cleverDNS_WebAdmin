@@ -1,13 +1,6 @@
-<h1>Dominios</h1>
+<h1>Dominios - Busqueda</h1>
 
-<% form_tag request.path,  :method => 'get' do %>
-<% content_tag :label do %>
-<%= text_field_tag :search,  params[:search] %>
-<% end %>
-<%= submit_tag "Buscar",  :name => nil %>
-<% end %>
-
-<%=will_paginate @domain , :class => "paginationTop" %>
+<%= will_paginate @domain , :class => "paginationTop" %>
 <table>
   <tr>
     <th class="name">Nombre</th>

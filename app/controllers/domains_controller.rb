@@ -5,12 +5,11 @@ class DomainsController < ApplicationController
   end
 
   def index
-    # @domains = Domain.all
-    @domains=Domain.paginate :page => params[:page],  :order => 'created_at DESC'
+    @domain=Domain.search(params[:search], params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @domains_pag }
+      format.xml  { render :xml => @domain }
     end
   end
 
@@ -18,10 +17,12 @@ class DomainsController < ApplicationController
   # GET /domains/1.xml
   def show
     @domain = Domain.find(params[:id])
+   # @domain = Domain.search(params[:search])
+
     respond_to do |format|
 
       format.html # show.html.erb
-      format.xml  { render :xml => @domain_pag }
+      format.xml  { render :xml => @domain }
     end
   end
 
@@ -109,4 +110,9 @@ class DomainsController < ApplicationController
     flash[:notice]="#{dig} Recargado con éxito"
     redirect_to :domains  
   end
+
+  def search
+    @domain=Domain.search params[:search]
+  end
+
 end

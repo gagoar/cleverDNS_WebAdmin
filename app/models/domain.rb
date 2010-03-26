@@ -11,4 +11,10 @@ class Domain < ActiveRecord::Base
   validates_numericality_of :ttl , :only_integer => true, :greater_than_or_equal_to => 60, :less_than_or_equal_to => 7200, :message => "El valor debe estar comprendido entre 60 y 7200 inclusive"
   validates_uniqueness_of :name,  :message => "Este dominio ya existe"
   accepts_nested_attributes_for :records, :reject_if => proc { |attrs| attrs['address'].blank? }
+  def self.search(search, page)
+  paginate :per_page => 5,  :page => page, 
+          :conditions => ['name like ?',  "%#{search}%"],  :order => 'name'
+  end
 end
+
+
