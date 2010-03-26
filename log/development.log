@@ -20952,3 +20952,18 @@ Processing DomainsController#index (for 127.0.1.1 at 2010-03-26 13:14:23) [GET]
 Rendering template within layouts/application
 Rendering domains/index
 Completed in 33ms (View: 23, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#destroy (for 127.0.1.1 at 2010-03-26 13:15:46) [DELETE]
+  Parameters: {"authenticity_token"=>"hvGAGxUU1yTRgRKzEj3nNr9oeWVX8mxydYoazEsEHNM=", "id"=>"12"}
+  [4;35;1mDomain Load (0.5ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 12) [0m
+  [4;36;1mDomain Destroy (0.4ms)[0m   [0;1mDELETE FROM "domains" WHERE "id" = 12[0m
+Redirected to http://clever.dns/domains
+Completed in 35ms (DB: 1) | 302 Found [http://clever.dns/domains/12]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-26 13:15:46) [GET]
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 40ms (View: 26, DB: 1) | 200 OK [http://clever.dns/domains]
