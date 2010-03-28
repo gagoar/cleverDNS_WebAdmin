@@ -23753,3 +23753,557 @@ Rendering template within layouts/application
 Rendering domains/show
   [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
 Completed in 26ms (View: 15, DB: 2) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 04:56:55) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 82ms (View: 14, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:11:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (4.1ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.0ms)
+Rendered domains/_form (22.9ms)
+Completed in 39ms (View: 29, DB: 1) | 200 OK [http://clever.dns/domains/1/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:11:39) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "_delete"=>"", "id"=>"1", "acl"=>"127.0.0.1/32"}, "1269763889879"=>{"address"=>"123.3.10.2", "acl"=>"12.3.3.1/2"}}}, "id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+  [4;36;1mDomain Load (0.2ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns' AND "domains".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+Redirected to http://clever.dns/domains/1
+Completed in 28ms (DB: 1) | 302 Found [http://clever.dns/domains/1]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:11:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 79ms (View: 69, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:13:47) [GET]
+  [4;36;1mDomain Load (1.0ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:13:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (3.7ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.1ms)
+Rendered domains/_form (24.1ms)
+Completed in 41ms (View: 30, DB: 1) | 200 OK [http://clever.dns/domains/1/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:13:51) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "_delete"=>"", "id"=>"1", "acl"=>"127.0.0.1/32"}}}, "id"=>"1"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+  [4;36;1mRecord Load (0.5ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns' AND "domains".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+Redirected to http://clever.dns/domains/1
+Completed in 30ms (DB: 1) | 302 Found [http://clever.dns/domains/1]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:13:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.8ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 94ms (View: 16, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:13:54) [GET]
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:13:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (3.7ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.2ms)
+Rendered domains/_form (22.6ms)
+Completed in 38ms (View: 28, DB: 1) | 200 OK [http://clever.dns/domains/1/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:14:09) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"1269764039375"=>{"address"=>"127.9.0.1", "acl"=>"127.1.1/32"}, "0"=>{"address"=>"127.0.0.1", "_delete"=>"", "id"=>"1", "acl"=>"127.0.0.1/32"}}}, "id"=>"1"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+  [4;36;1mRecord Load (0.5ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+  [4;36;1mRecord Load (0.1ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.1.1/32' AND "records".domain_id = 1) LIMIT 1[0m
+  [4;35;1mDomain Load (0.1ms)[0m   [0mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns' AND "domains".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.1.1/32' AND "records".domain_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering domains/edit
+Rendered domains/_record (12.0ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.4ms)
+Rendered domains/_record (3.6ms)
+Rendered domains/_form (78.8ms)
+Completed in 119ms (View: 85, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:14:17) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "_delete"=>"", "id"=>"1", "acl"=>"127.0.0.1/32"}, "1"=>{"address"=>"127.9.0.1", "acl"=>"127.1.1.1/32"}}}, "id"=>"1"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+  [4;35;1mRecord Load (0.1ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.1.1.1/32' AND "records".domain_id = 1) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns' AND "domains".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.1.1.1/32' AND "records".domain_id = 1) LIMIT 1[0m
+  [4;35;1mRecord Create (0.3ms)[0m   [0mINSERT INTO "records" ("address", "created_at", "updated_at", "domain_id", "acl") VALUES('127.9.0.1', '2010-03-28 08:14:17', '2010-03-28 08:14:17', 1, '127.1.1.1/32')[0m
+Redirected to http://clever.dns/domains/1
+Completed in 41ms (DB: 2) | 302 Found [http://clever.dns/domains/1]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:14:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.5ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:14:22) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:14:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.5ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 88ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:14:27) [GET]
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:14:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;35;1mRecord Load (0.5ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (3.7ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.0ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.3ms)
+Rendered domains/_form (29.5ms)
+Completed in 47ms (View: 36, DB: 1) | 200 OK [http://clever.dns/domains/1/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:14:33) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "_delete"=>"1", "id"=>"1", "acl"=>"127.0.0.1/32"}, "1"=>{"address"=>"127.9.0.1", "_delete"=>"", "id"=>"12", "acl"=>"127.1.1.1/32"}}}, "id"=>"1"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+  [4;35;1mRecord Load (0.7ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.1.1.1/32' AND "records".domain_id = 1 AND "records".id <> 12) LIMIT 1[0m
+  [4;35;1mDomain Load (0.2ms)[0m   [0mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns' AND "domains".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.1.1.1/32' AND "records".domain_id = 1 AND "records".id <> 12) LIMIT 1[0m
+  [4;35;1mRecord Destroy (0.3ms)[0m   [0mDELETE FROM "records" WHERE "id" = 1[0m
+Redirected to http://clever.dns/domains/1
+Completed in 40ms (DB: 2) | 302 Found [http://clever.dns/domains/1]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:14:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:14:37) [GET]
+  [4;36;1mDomain Load (1.0ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:14:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (3.6ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (2.8ms)
+Rendered domains/_form (21.7ms)
+Completed in 38ms (View: 28, DB: 1) | 200 OK [http://clever.dns/domains/1/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:14:49) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www.clever.dns", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "_delete"=>"", "id"=>"12", "acl"=>"127.0.0.1/32"}}}, "id"=>"1"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+  [4;36;1mRecord Load (9.2ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 12) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.clever.dns' AND "domains".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '127.0.0.1/32' AND "records".domain_id = 1 AND "records".id <> 12) LIMIT 1[0m
+  [4;36;1mRecord Update (0.3ms)[0m   [0;1mUPDATE "records" SET "updated_at" = '2010-03-28 08:14:49', "acl" = '127.0.0.1/32', "address" = '127.0.0.1' WHERE "id" = 12[0m
+Redirected to http://clever.dns/domains/1
+Completed in 93ms (DB: 10) | 302 Found [http://clever.dns/domains/1]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:14:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:14:51) [GET]
+  [4;35;1mDomain Load (1.1ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:14:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:14:55) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 05:14:56) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.6ms)
+Rendered domains/_record (2.1ms)
+Rendered domains/_form (12.9ms)
+Completed in 35ms (View: 18, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-28 05:15:14) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"wqww.googl.com", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"", "acl"=>""}}}}
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;36;1mDomain Load (0.2ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'wqww.googl.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '' AND "records".domain_id IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.5ms)
+Rendered domains/_record (6.6ms)
+Rendered domains/_form (18.9ms)
+Completed in 59ms (View: 24, DB: 0) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-28 05:15:25) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"wqww.googl.com", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"127.0.0.1", "acl"=>"232.2.2.2/3"}}}}
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '232.2.2.2/3' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;35;1mDomain Load (0.1ms)[0m   [0mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'wqww.googl.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '232.2.2.2/3' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;35;1mDomain Create (0.2ms)[0m   [0mINSERT INTO "domains" ("name", "ttl", "created_at", "updated_at", "enabled") VALUES('wqww.googl.com', 150, '2010-03-28 08:15:25', '2010-03-28 08:15:25', 't')[0m
+  [4;36;1mRecord Create (0.1ms)[0m   [0;1mINSERT INTO "records" ("address", "created_at", "updated_at", "domain_id", "acl") VALUES('127.0.0.1', '2010-03-28 08:15:25', '2010-03-28 08:15:25', 17, '232.2.2.2/3')[0m
+Redirected to http://clever.dns/domains/17
+Completed in 36ms (DB: 1) | 302 Found [http://clever.dns/domains]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:15:25) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 17) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains/17]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:15:29) [GET]
+  [4;35;1mDomain Load (0.9ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#17 (for 127.0.1.1 at 2010-03-28 05:15:33) [POST]
+  Parameters: {"authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw="}
+
+ActionController::UnknownAction (No action responded to 17. Actions: create, destroy, edit, index, new, reload, search, show, update, and wellcome):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#17 (for 127.0.1.1 at 2010-03-28 05:16:26) [POST]
+  Parameters: {"authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw="}
+
+ActionController::UnknownAction (No action responded to 17. Actions: create, destroy, edit, index, new, reload, search, show, update, and wellcome):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:18:40) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 17) [0m
+Completed in 89ms (View: 77, DB: 1) | 200 OK [http://clever.dns/domains/17]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:18:44) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 35ms (View: 26, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#destroy (for 127.0.1.1 at 2010-03-28 05:18:52) [DELETE]
+  Parameters: {"authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "id"=>"17"}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 17) [0m
+  [4;36;1mDomain Destroy (0.3ms)[0m   [0;1mDELETE FROM "domains" WHERE "id" = 17[0m
+Redirected to http://clever.dns/domains
+Completed in 15ms (DB: 1) | 302 Found [http://clever.dns/domains/17]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:18:52) [GET]
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:19:02) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 05:19:05) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.7ms)
+Rendered domains/_record (2.2ms)
+Rendered domains/_form (12.6ms)
+Completed in 35ms (View: 18, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-28 05:19:20) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"192.1681.1`", "acl"=>"192.168.1.1"}}}}
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.1.1' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.1.1' AND "records".domain_id IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.6ms)
+Rendered domains/_record (4.7ms)
+Rendered domains/_form (18.4ms)
+Completed in 55ms (View: 24, DB: 0) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-28 05:19:33) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"192.168.1.1", "acl"=>"192.168.1.1/21"}}}}
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.1.1/21' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;35;1mDomain Load (0.1ms)[0m   [0mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.1.1/21' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;35;1mDomain Create (0.2ms)[0m   [0mINSERT INTO "domains" ("name", "ttl", "created_at", "updated_at", "enabled") VALUES('www', 150, '2010-03-28 08:19:33', '2010-03-28 08:19:33', 't')[0m
+  [4;36;1mRecord Create (0.1ms)[0m   [0;1mINSERT INTO "records" ("address", "created_at", "updated_at", "domain_id", "acl") VALUES('192.168.1.1', '2010-03-28 08:19:33', '2010-03-28 08:19:33', 18, '192.168.1.1/21')[0m
+Redirected to http://clever.dns/domains/18
+Completed in 69ms (DB: 1) | 302 Found [http://clever.dns/domains]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:19:33) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+Completed in 84ms (View: 16, DB: 1) | 200 OK [http://clever.dns/domains/18]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 05:19:38) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.5ms)
+Rendered domains/_record (2.3ms)
+Rendered domains/_form (12.5ms)
+Completed in 36ms (View: 19, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:19:45) [GET]
+  [4;35;1mDomain Load (1.0ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:19:48) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;35;1mRecord Load (0.8ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+Rendered domains/_record (4.0ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.4ms)
+Rendered domains/_form (26.6ms)
+Completed in 43ms (View: 33, DB: 1) | 200 OK [http://clever.dns/domains/18/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:20:01) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"192.168.1.1", "_delete"=>"", "id"=>"14", "acl"=>"192.168.1.1/21"}, "1269764390400"=>{"address"=>"192.168.1.2", "acl"=>"192.168.2.2/21"}}}, "id"=>"18"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.1.1/21' AND "records".domain_id = 18 AND "records".id <> 14) LIMIT 1[0m
+  [4;35;1mRecord Load (0.1ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.2.2/21' AND "records".domain_id = 18) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www' AND "domains".id <> 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.1.1/21' AND "records".domain_id = 18 AND "records".id <> 14) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.2.2/21' AND "records".domain_id = 18) LIMIT 1[0m
+  [4;35;1mRecord Create (0.3ms)[0m   [0mINSERT INTO "records" ("address", "created_at", "updated_at", "domain_id", "acl") VALUES('192.168.1.2', '2010-03-28 08:20:01', '2010-03-28 08:20:01', 18, '192.168.2.2/21')[0m
+Redirected to http://clever.dns/domains/18
+Completed in 43ms (DB: 1) | 302 Found [http://clever.dns/domains/18]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:20:01) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;35;1mRecord Load (0.5ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains/18]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:20:04) [GET]
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 05:20:06) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;36;1mRecord Load (0.6ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+Rendered domains/_record (13.8ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.2ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.4ms)
+Rendered domains/_form (88.7ms)
+Completed in 111ms (View: 95, DB: 1) | 200 OK [http://clever.dns/domains/18/edit]
+
+
+Processing DomainsController#update (for 127.0.1.1 at 2010-03-28 05:20:10) [PUT]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"www", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"192.168.1.1", "_delete"=>"1", "id"=>"14", "acl"=>"192.168.1.1/21"}, "1"=>{"address"=>"192.168.1.2", "_delete"=>"", "id"=>"15", "acl"=>"192.168.2.2/21"}}}, "id"=>"18"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+  [4;36;1mRecord Load (0.6ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+  [4;35;1mRecord Load (0.3ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.2.2/21' AND "records".domain_id = 18 AND "records".id <> 15) LIMIT 1[0m
+  [4;36;1mDomain Load (0.1ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www' AND "domains".id <> 18) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = '192.168.2.2/21' AND "records".domain_id = 18 AND "records".id <> 15) LIMIT 1[0m
+  [4;36;1mRecord Destroy (0.3ms)[0m   [0;1mDELETE FROM "records" WHERE "id" = 14[0m
+Redirected to http://clever.dns/domains/18
+Completed in 35ms (DB: 2) | 302 Found [http://clever.dns/domains/18]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 05:20:10) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 18) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains/18]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:20:12) [GET]
+  [4;35;1mDomain Load (1.0ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#destroy (for 127.0.1.1 at 2010-03-28 05:20:15) [DELETE]
+  Parameters: {"authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "id"=>"18"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 18) [0m
+  [4;35;1mDomain Destroy (0.3ms)[0m   [0mDELETE FROM "domains" WHERE "id" = 18[0m
+Redirected to http://clever.dns/domains
+Completed in 84ms (DB: 1) | 302 Found [http://clever.dns/domains/18]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:20:15) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 05:20:18) [GET]
+  [4;35;1mDomain Load (1.1ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains]

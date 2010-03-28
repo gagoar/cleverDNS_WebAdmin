@@ -13,7 +13,7 @@ class Domain < ActiveRecord::Base
   validates_each :records do |model,  attr,  value| 
   model.errors.add attr, 'error en model' if value.blank?
   end
-  accepts_nested_attributes_for :records,  :reject_if => proc { |a| a[:content].blank? },  :allow_destroy => true
+  accepts_nested_attributes_for :records,  :reject_if => proc { |a| a.blank? },  :allow_destroy => true
 
   def self.search(search, page)
   paginate :per_page => 5,  :page => page, 
