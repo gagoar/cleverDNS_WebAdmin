@@ -1,10 +1,10 @@
 <h1>Dominios</h1>
 
-<% form_tag request.path,  :method => 'get' do %>
+<% form_tag request.path, :class => 'search_form', :method => 'get' do %>
 <% content_tag :label do %>
-<%= text_field_tag :search,  params[:search] %>
+<%= text_field_tag 'search',  params[:search] %>
 <% end %>
-<%= submit_tag "Buscar",  :name => nil %>
+<%= submit_tag "Buscar",  :name => nil , :class=>"search_button" %>
 <% end %>
 
 <%=will_paginate @domain , :class => "paginationTop" %>

@@ -20967,3 +20967,1487 @@ Processing DomainsController#index (for 127.0.1.1 at 2010-03-26 13:15:46) [GET]
 Rendering template within layouts/application
 Rendering domains/index
 Completed in 40ms (View: 26, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#wellcome (for 127.0.1.1 at 2010-03-26 13:26:33) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://clever.dns/]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-26 13:26:35) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#wellcome (for 192.168.1.101 at 2010-03-28 01:59:29) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 114ms (View: 112, DB: 0) | 200 OK [http://192.168.1.140/]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 01:59:38) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 93ms (View: 74, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:02:25) [GET]
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:02:53) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:00) [GET]
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:08) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+ERROR: compiling _run_erb_app47views47domains47index46html46erb RAISED compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+..._field_tag,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47domains47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Dominios</h1>\n\n"
+
+;  form_tag request.path, :class => 'search', :method => 'get' do ; @output_buffer.concat "\n"
+;  content_tag :label do ; @output_buffer.concat "\n"
+; @output_buffer.concat(( text_field_tag,  params[:search] ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "Buscar",  :name => nil ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((will_paginate @domain , :class => "paginationTop" ).to_s); @output_buffer.concat "\n<table>\n  <tr>\n    <th class=\"name\">Nombre</th>\n    <th class=\"ttl\">TTL</th>\n    <th class=\"enabled\">Activado</th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n  </tr>\n  "
+
+
+
+
+
+
+
+
+
+; style="row_alt"; @output_buffer.concat "\n"
+;  @domain.each_with_index do |domain, index| ; @output_buffer.concat "\n    <tr class="
+; @output_buffer.concat((h style if index % 2 ==0 ).to_s); @output_buffer.concat ">\n    <td>"
+; @output_buffer.concat((h domain.name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.ttl ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.enabled ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Mostrar', domain ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Modficar', edit_domain_path(domain) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n"
+
+; @output_buffer.concat(( will_paginate @domain , :class => "paginationBottom").to_s); @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:38:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/controllers/domains_controller.rb:10:in `index'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+..._field_tag,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^) on line #5 of app/views/domains/index.html.erb:
+2: 
+3: <% form_tag request.path, :class => 'search', :method => 'get' do %>
+4: <% content_tag :label do %>
+5: <%= text_field_tag,  params[:search] %>
+6: <% end %>
+7: <%= submit_tag "Buscar",  :name => nil %>
+8: <% end %>
+
+    app/views/domains/index.html.erb:38:in `compile!'
+    app/controllers/domains_controller.rb:10:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:10) [GET]
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+ERROR: compiling _run_erb_app47views47domains47index46html46erb RAISED compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+..._field_tag,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47domains47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Dominios</h1>\n\n"
+
+;  form_tag request.path, :class => 'search', :method => 'get' do ; @output_buffer.concat "\n"
+;  content_tag :label do ; @output_buffer.concat "\n"
+; @output_buffer.concat(( text_field_tag,  params[:search] ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "Buscar",  :name => nil ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((will_paginate @domain , :class => "paginationTop" ).to_s); @output_buffer.concat "\n<table>\n  <tr>\n    <th class=\"name\">Nombre</th>\n    <th class=\"ttl\">TTL</th>\n    <th class=\"enabled\">Activado</th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n  </tr>\n  "
+
+
+
+
+
+
+
+
+
+; style="row_alt"; @output_buffer.concat "\n"
+;  @domain.each_with_index do |domain, index| ; @output_buffer.concat "\n    <tr class="
+; @output_buffer.concat((h style if index % 2 ==0 ).to_s); @output_buffer.concat ">\n    <td>"
+; @output_buffer.concat((h domain.name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.ttl ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.enabled ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Mostrar', domain ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Modficar', edit_domain_path(domain) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n"
+
+; @output_buffer.concat(( will_paginate @domain , :class => "paginationBottom").to_s); @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:38:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/controllers/domains_controller.rb:10:in `index'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+..._field_tag,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^) on line #5 of app/views/domains/index.html.erb:
+2: 
+3: <% form_tag request.path, :class => 'search', :method => 'get' do %>
+4: <% content_tag :label do %>
+5: <%= text_field_tag,  params[:search] %>
+6: <% end %>
+7: <%= submit_tag "Buscar",  :name => nil %>
+8: <% end %>
+
+    app/views/domains/index.html.erb:38:in `compile!'
+    app/controllers/domains_controller.rb:10:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:16) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:40) [GET]
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+ERROR: compiling _run_erb_app47views47domains47index46html46erb RAISED compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+...text_field,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47domains47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Dominios</h1>\n\n"
+
+;  form_tag request.path, :class => 'search', :method => 'get' do ; @output_buffer.concat "\n"
+;  content_tag :label do ; @output_buffer.concat "\n"
+; @output_buffer.concat(( text_field,  params[:search] ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "Buscar",  :name => nil ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((will_paginate @domain , :class => "paginationTop" ).to_s); @output_buffer.concat "\n<table>\n  <tr>\n    <th class=\"name\">Nombre</th>\n    <th class=\"ttl\">TTL</th>\n    <th class=\"enabled\">Activado</th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n  </tr>\n  "
+
+
+
+
+
+
+
+
+
+; style="row_alt"; @output_buffer.concat "\n"
+;  @domain.each_with_index do |domain, index| ; @output_buffer.concat "\n    <tr class="
+; @output_buffer.concat((h style if index % 2 ==0 ).to_s); @output_buffer.concat ">\n    <td>"
+; @output_buffer.concat((h domain.name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.ttl ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.enabled ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Mostrar', domain ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Modficar', edit_domain_path(domain) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n"
+
+; @output_buffer.concat(( will_paginate @domain , :class => "paginationBottom").to_s); @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:38:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/controllers/domains_controller.rb:10:in `index'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+...text_field,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^) on line #5 of app/views/domains/index.html.erb:
+2: 
+3: <% form_tag request.path, :class => 'search', :method => 'get' do %>
+4: <% content_tag :label do %>
+5: <%= text_field,  params[:search] %>
+6: <% end %>
+7: <%= submit_tag "Buscar",  :name => nil %>
+8: <% end %>
+
+    app/views/domains/index.html.erb:38:in `compile!'
+    app/controllers/domains_controller.rb:10:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:42) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+ERROR: compiling _run_erb_app47views47domains47index46html46erb RAISED compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+...text_field,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47domains47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Dominios</h1>\n\n"
+
+;  form_tag request.path, :class => 'search', :method => 'get' do ; @output_buffer.concat "\n"
+;  content_tag :label do ; @output_buffer.concat "\n"
+; @output_buffer.concat(( text_field,  params[:search] ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "Buscar",  :name => nil ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((will_paginate @domain , :class => "paginationTop" ).to_s); @output_buffer.concat "\n<table>\n  <tr>\n    <th class=\"name\">Nombre</th>\n    <th class=\"ttl\">TTL</th>\n    <th class=\"enabled\">Activado</th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n  </tr>\n  "
+
+
+
+
+
+
+
+
+
+; style="row_alt"; @output_buffer.concat "\n"
+;  @domain.each_with_index do |domain, index| ; @output_buffer.concat "\n    <tr class="
+; @output_buffer.concat((h style if index % 2 ==0 ).to_s); @output_buffer.concat ">\n    <td>"
+; @output_buffer.concat((h domain.name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.ttl ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.enabled ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Mostrar', domain ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Modficar', edit_domain_path(domain) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n"
+
+; @output_buffer.concat(( will_paginate @domain , :class => "paginationBottom").to_s); @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:38:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/controllers/domains_controller.rb:10:in `index'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+...text_field,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^) on line #5 of app/views/domains/index.html.erb:
+2: 
+3: <% form_tag request.path, :class => 'search', :method => 'get' do %>
+4: <% content_tag :label do %>
+5: <%= text_field,  params[:search] %>
+6: <% end %>
+7: <%= submit_tag "Buscar",  :name => nil %>
+8: <% end %>
+
+    app/views/domains/index.html.erb:38:in `compile!'
+    app/controllers/domains_controller.rb:10:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:03:56) [GET]
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+ERROR: compiling _run_erb_app47views47domains47index46html46erb RAISED compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+...text_field,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47domains47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Dominios</h1>\n\n"
+
+;  form_tag request.path, :class => 'search', :method => 'get' do ; @output_buffer.concat "\n"
+;  content_tag :label do ; @output_buffer.concat "\n"
+; @output_buffer.concat(( text_field,  params[:search] ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer.concat(( submit_tag "Buscar",  :name => nil ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((will_paginate @domain , :class => "paginationTop" ).to_s); @output_buffer.concat "\n<table>\n  <tr>\n    <th class=\"name\">Nombre</th>\n    <th class=\"ttl\">TTL</th>\n    <th class=\"enabled\">Activado</th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n    <th class=\"actions\"></th>\n  </tr>\n  "
+
+
+
+
+
+
+
+
+
+; style="row_alt"; @output_buffer.concat "\n"
+;  @domain.each_with_index do |domain, index| ; @output_buffer.concat "\n    <tr class="
+; @output_buffer.concat((h style if index % 2 ==0 ).to_s); @output_buffer.concat ">\n    <td>"
+; @output_buffer.concat((h domain.name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.ttl ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h domain.enabled ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Mostrar', domain ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Modficar', edit_domain_path(domain) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n"
+
+; @output_buffer.concat(( will_paginate @domain , :class => "paginationBottom").to_s); @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:38:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/controllers/domains_controller.rb:10:in `index'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/gagoar/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/gagoar/dev/cleverDNS_WebAdmin.github.com/app/views/domains/index.html.erb:5: syntax error, unexpected ')', expecting '='
+...text_field,  params[:search] ).to_s); @output_buffer.concat ...
+                              ^) on line #5 of app/views/domains/index.html.erb:
+2: 
+3: <% form_tag request.path, :class => 'search', :method => 'get' do %>
+4: <% content_tag :label do %>
+5: <%= text_field,  params[:search] %>
+6: <% end %>
+7: <%= submit_tag "Buscar",  :name => nil %>
+8: <% end %>
+
+    app/views/domains/index.html.erb:38:in `compile!'
+    app/controllers/domains_controller.rb:10:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:05:03) [GET]
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:06:07) [GET]
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:07:58) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 78ms (View: 70, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:08:26) [GET]
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:08:28) [GET]
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#new (for 192.168.1.101 at 2010-03-28 02:08:37) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (3.5ms)
+Rendered domains/_record (1.9ms)
+Rendered domains/_form (26.3ms)
+Completed in 104ms (View: 61, DB: 0) | 200 OK [http://192.168.1.140/domains/new]
+
+
+Processing DomainsController#create (for 192.168.1.101 at 2010-03-28 02:09:01) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2QfOU4S6R/7t1t7WbvFxQqNGWol55ouL/Jk78PfZtMk=", "domain"=>{"name"=>"www.google.com", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"", "acl"=>""}}}}
+  [4;35;1mDomain Load (0.2ms)[0m   [0mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'www.google.com') LIMIT 1[0m
+  [4;36;1mDomain Create (0.3ms)[0m   [0;1mINSERT INTO "domains" ("name", "ttl", "created_at", "updated_at", "enabled") VALUES('www.google.com', 150, '2010-03-28 05:09:01', '2010-03-28 05:09:01', 't')[0m
+Redirected to http://192.168.1.140/domains/13
+Completed in 21ms (DB: 0) | 302 Found [http://192.168.1.140/domains]
+
+
+Processing DomainsController#show (for 192.168.1.101 at 2010-03-28 02:09:01) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 13) [0m
+Completed in 101ms (View: 92, DB: 1) | 200 OK [http://192.168.1.140/domains/13]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:09:05) [GET]
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:09:12) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://192.168.1.140/domains?=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:09:31) [GET]
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 91ms (View: 83, DB: 1) | 200 OK [http://192.168.1.140/domains?=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:09:36) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:10:12) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:11:28) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:14:32) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:17:53) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:18:15) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:21:42) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:39:18) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing ApplicationController#index (for 192.168.1.101 at 2010-03-28 02:39:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/input_bk.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:39:41) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing ApplicationController#index (for 192.168.1.101 at 2010-03-28 02:39:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/input_bk.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.1.101 at 2010-03-28 02:39:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/input_bk.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:43:20) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:43:43) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:44:18) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 83ms (View: 76, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:51:02) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:55:37) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:55:40) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:55:58) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing ApplicationController#index (for 192.168.1.101 at 2010-03-28 02:55:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/search_button.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:57:35) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing ApplicationController#index (for 192.168.1.101 at 2010-03-28 02:57:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/search_button.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:57:36) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing ApplicationController#index (for 192.168.1.101 at 2010-03-28 02:57:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/search_button.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 02:58:12) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.6ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 03:03:46) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 03:06:58) [GET]
+  Parameters: {"search"=>"go"}
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 03:08:23) [GET]
+  Parameters: {"search"=>"go"}
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%go%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://192.168.1.140/domains?search=go]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 03:08:25) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 87ms (View: 78, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#new (for 192.168.1.101 at 2010-03-28 03:08:29) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.5ms)
+Rendered domains/_record (2.0ms)
+Rendered domains/_form (12.3ms)
+Completed in 34ms (View: 18, DB: 0) | 200 OK [http://192.168.1.140/domains/new]
+
+
+Processing DomainsController#reload (for 192.168.1.101 at 2010-03-28 03:08:43) [POST]
+  Parameters: {"authenticity_token"=>"2QfOU4S6R/7t1t7WbvFxQqNGWol55ouL/Jk78PfZtMk="}
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domains" [0m
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 13) [0m
+Redirected to http://192.168.1.140/domains
+Completed in 1857ms (DB: 1) | 302 Found [http://192.168.1.140/domains/reload]
+
+
+Processing DomainsController#index (for 192.168.1.101 at 2010-03-28 03:08:45) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://192.168.1.140/domains]
+
+
+Processing DomainsController#edit (for 192.168.1.101 at 2010-03-28 03:08:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (3.5ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.1ms)
+Rendered domains/_form (22.3ms)
+Completed in 58ms (View: 48, DB: 1) | 200 OK [http://192.168.1.140/domains/1/edit]
+
+
+Processing DomainsController#wellcome (for 127.0.1.1 at 2010-03-28 03:09:17) [GET]
+Rendering template within layouts/application
+Rendering domains/wellcome
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://clever.dns/]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:09:20) [GET]
+  [4;35;1mDomain Load (1.0ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 94ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:09:27) [GET]
+  Parameters: {"search"=>""}
+  [4;36;1mDomain Load (10.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 38ms (View: 19, DB: 10) | 200 OK [http://clever.dns/domains?search=]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:09:27) [GET]
+  Parameters: {"search"=>""}
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains?search=]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 03:09:37) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.2ms)
+Rendered domains/_record (2.0ms)
+Rendered domains/_form (10.7ms)
+Completed in 33ms (View: 16, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:09:45) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 95ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 03:09:50) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.6ms)
+Rendered domains/_record (2.2ms)
+Rendered domains/_form (12.9ms)
+Completed in 37ms (View: 19, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-28 03:09:56) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"fdgdgdfgdg", "ttl"=>"150fdgfdgf", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"fgfdgd", "acl"=>"gdfg"}}}}
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = 'gdfg' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;36;1mDomain Load (0.2ms)[0m   [0;1mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'fdgdgdfgdg') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "records".id FROM "records" WHERE ("records"."acl" = 'gdfg' AND "records".domain_id IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.2ms)
+Rendered domains/_record (4.2ms)
+Rendered domains/_form (18.7ms)
+Completed in 63ms (View: 24, DB: 0) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:10:04) [GET]
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 94ms (View: 84, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:10:48) [GET]
+  [4;35;1mDomain Load (1.0ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 03:10:51) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.3ms)
+Rendered domains/_record (1.9ms)
+Rendered domains/_form (10.9ms)
+Completed in 37ms (View: 16, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#create (for 127.0.1.1 at 2010-03-28 03:10:56) [POST]
+  Parameters: {"commit"=>"Guardar", "authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "domain"=>{"name"=>"dfgdgfgf", "ttl"=>"150", "enabled"=>"1", "records_attributes"=>{"0"=>{"address"=>"gfgfgf", "acl"=>"fgfgf"}}}}
+  [4;36;1mRecord Load (0.2ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = 'fgfgf' AND "records".domain_id IS NULL) LIMIT 1[0m
+  [4;35;1mDomain Load (0.1ms)[0m   [0mSELECT "domains".id FROM "domains" WHERE ("domains"."name" = 'dfgdgfgf') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "records".id FROM "records" WHERE ("records"."acl" = 'fgfgf' AND "records".domain_id IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.5ms)
+Rendered domains/_record (4.5ms)
+Rendered domains/_form (17.3ms)
+Completed in 121ms (View: 23, DB: 0) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:11:09) [GET]
+  [4;35;1mDomain Load (1.3ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:11:36) [GET]
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:11:39) [GET]
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 32ms (View: 18, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 03:11:40) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.4ms)
+Rendered domains/_record (2.0ms)
+Rendered domains/_form (12.3ms)
+Completed in 102ms (View: 18, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:11:46) [GET]
+  [4;36;1mDomain Load (1.0ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#show (for 127.0.1.1 at 2010-03-28 03:11:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/show
+  [4;36;1mRecord Load (0.4ms)[0m   [0;1mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Completed in 26ms (View: 14, DB: 1) | 200 OK [http://clever.dns/domains/1]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:11:54) [GET]
+  [4;35;1mDomain Load (0.9ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 127.0.1.1 at 2010-03-28 03:11:56) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mDomain Load (0.3ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;35;1mRecord Load (0.2ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 13) [0m
+Rendered domains/_record (3.8ms)
+Rendered domains/_form (19.3ms)
+Completed in 104ms (View: 25, DB: 1) | 200 OK [http://clever.dns/domains/13/edit]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:11:58) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#destroy (for 127.0.1.1 at 2010-03-28 03:12:01) [DELETE]
+  Parameters: {"authenticity_token"=>"2JBrgONYneug3KKTyaoK/IHam/GKs8izTLv/Fh1vdNw=", "id"=>"13"}
+  [4;35;1mDomain Load (0.3ms)[0m   [0mSELECT * FROM "domains" WHERE ("domains"."id" = 13) [0m
+  [4;36;1mDomain Destroy (0.2ms)[0m   [0;1mDELETE FROM "domains" WHERE "id" = 13[0m
+Redirected to http://clever.dns/domains
+Completed in 16ms (DB: 1) | 302 Found [http://clever.dns/domains/13]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:12:02) [GET]
+  [4;35;1mDomain Load (0.6ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:12:14) [GET]
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#new (for 127.0.1.1 at 2010-03-28 03:12:17) [GET]
+Rendering template within layouts/application
+Rendering domains/new
+Rendered domains/_record (2.3ms)
+Rendered domains/_record (2.2ms)
+Rendered domains/_form (12.1ms)
+Completed in 35ms (View: 18, DB: 0) | 200 OK [http://clever.dns/domains/new]
+
+
+Processing DomainsController#index (for 127.0.1.1 at 2010-03-28 03:12:21) [GET]
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domains" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering domains/index
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://clever.dns/domains]
+
+
+Processing DomainsController#edit (for 192.168.1.101 at 2010-03-28 03:13:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDomain Load (0.4ms)[0m   [0;1mSELECT * FROM "domains" WHERE ("domains"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering domains/edit
+  [4;35;1mRecord Load (0.4ms)[0m   [0mSELECT * FROM "records" WHERE ("records".domain_id = 1) [0m
+Rendered domains/_record (3.4ms)
+DEPRECATION WARNING: _delete is deprecated in nested attributes. Use _destroy instead.. (called from _delete at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/nested_attributes.rb:263)
+Rendered domains/_record (3.5ms)
+Rendered domains/_form (25.2ms)
+Completed in 41ms (View: 32, DB: 1) | 200 OK [http://192.168.1.140/domains/1/edit]

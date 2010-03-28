@@ -135,6 +135,27 @@ border-top: 1px solid #B54B02;
 text-align: center;
 border-bottom: 1px solid #B54B02;
 }
+
+input{
+
+}
+input[type=text]{
+background: transparent url(images/input_bk.png) left top repeat;
+border: 1px solid #994118;
+color: #0d202e;
+}
+
+#search{
+background: transparent url(images/input_bk.png) left top repeat;
+width: 150px;
+border: 1px solid #994118;
+padding-left: 5px;}
+
+.search_button{
+background:url("images/serch-button.png") no-repeat scroll left 2px transparent;
+border:medium none;
+color: #0d202e;
+}
 /* ---------------------------------------------------
     Layout
 ------------------------------------------------------ */
@@ -161,9 +182,9 @@ background: transparent url(images/header.png) left top no-repeat;}
 #menu{
 display: block;
 position: absolute;
-width: 370px;
+width: 600px;
 height: 15px;
-left: 410px;
+left: 176px;
 top:56px;
 }
 
@@ -204,6 +225,16 @@ clear: both;
 
 h2{
 margin: 15px 0;}
+
+.search_form{
+margin-bottom:10px;
+}
+
+.search_button{
+height:23px;
+margin-left:5px;
+padding-left:20px;
+}
 
 table{
 width: 750px;
