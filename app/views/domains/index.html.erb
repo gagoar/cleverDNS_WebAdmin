@@ -25,7 +25,7 @@
     <td><%=h domain.enabled %></td>
     <td><%= link_to 'Mostrar', domain %></td>
     <td><%= link_to 'Modficar', edit_domain_path(domain) %></td>
-    <td><%= link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :delete %></td>
+    <td><%= link_to 'Eliminar', domain, :confirm => "¿Está seguro que desea eliminar el registro?", :method => :destroy %></td>
   </tr>
 <% end %>
 </table>

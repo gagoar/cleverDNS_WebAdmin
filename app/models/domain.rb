@@ -10,7 +10,11 @@ class Domain < ActiveRecord::Base
   validates_format_of :name,  :with => /^\w/ , :message => "comienza con un caracter invalido"
   validates_numericality_of :ttl , :only_integer => true, :greater_than_or_equal_to => 60, :less_than_or_equal_to => 7200, :message => "El valor debe estar comprendido entre 60 y 7200 inclusive"
   validates_uniqueness_of :name,  :message => "Este dominio ya existe"
-  accepts_nested_attributes_for :records, :reject_if => proc { |attrs| attrs['address'].blank? }
+  validates_each :records do |model,  attr,  value| 
+  model.errors.add attr, 'error en model' if value.blank?
+  end
+  accepts_nested_attributes_for :records,  :reject_if => proc { |a| a[:content].blank? },  :allow_destroy => true
+
   def self.search(search, page)
   paginate :per_page => 5,  :page => page, 
           :conditions => ['name like ?',  "%#{search}%"],  :order => 'name'

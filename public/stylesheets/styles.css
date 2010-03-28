@@ -136,9 +136,6 @@ text-align: center;
 border-bottom: 1px solid #B54B02;
 }
 
-input{
-
-}
 input[type=text]{
 background: transparent url(images/input_bk.png) left top repeat;
 border: 1px solid #994118;
